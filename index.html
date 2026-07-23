@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional | Administrasi & HR</title>
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Tema Luar Angkasa yang Tenang */
+        :root {
+            --bg-color: #0b0d17;
+            --card-bg: rgba(20, 24, 44, 0.7);
+            --text-main: #e0e0e0;
+            --text-muted: #a0a4b8;
+            --accent: #4a90e2;
+            --accent-glow: rgba(74, 144, 226, 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(74, 144, 226, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(138, 43, 226, 0.08) 0%, transparent 50%);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: #ffffff;
+        }
+
+        /* Animasi Bintang Latar Belakang */
+        .stars {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: transparent;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section (Perkenalan) */
+        header {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero-content h1 span {
+            color: var(--accent);
+            text-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        /* Tombol Interaktif */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 0 20px var(--accent-glow);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* Section Global */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            display: block;
+            margin: 15px auto 0;
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        /* Grid Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        /* Animasi Penuh Gerakan pada Tiap Sentuhan */
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            border-color: var(--accent);
+            box-shadow: 0 15px 30px rgba(74, 144, 226, 0.2), inset 0 0 15px rgba(74, 144, 226, 0.1);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover i {
+            transform: rotate(15deg) scale(1.2);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Skills Tags */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .skill-tag {
+            background: rgba(255,255,255,0.05);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-tag:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 15px var(--accent-glow);
+            border-color: transparent;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 50px;
+        }
+
+        /* Animasi Keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Efek Bintang Sederhana menggunakan CSS -->
+    <div class="stars" style="background: url('https://www.transparenttextures.com/patterns/stardust.png'); opacity: 0.4;"></div>
+
+    <!-- HEADER / INTRO -->
+    <header id="beranda">
+        <div class="container hero-content">
+            <h1>Halo, Saya <span>Dery Rustandinata Safiuddin</span></h1>
+            <p>
+                Lulusan S1 Manajemen dari Universitas Halu Oleo dengan spesialisasi di bidang administrasi operasional, pengolahan data, dan <i>Human Resources</i>. Saya memiliki dedikasi tinggi dalam merancang dan mengimplementasikan sistem operasional yang efisien, terstruktur, dan aman untuk mendukung kelancaran serta pertumbuhan perusahaan.
+            </p>
+            <a href="#proyek" class="btn">Lihat Portofolio</a>
+        </div>
+    </header>
+
+    <!-- KEAHLIAN / SKILLS -->
+    <section id="keahlian">
+        <div class="container">
+            <h2 class="section-title">Keahlian Profesional</h2>
+            
+            <h3 style="text-align: center; margin-bottom: 20px; color: var(--text-muted);">Hard Skills & Tools</h3>
+            <div class="skills-container" style="margin-bottom: 50px;">
+                <div class="skill-tag"><i class="fab fa-microsoft" style="color: #00a4ef;"></i> Microsoft Office (Excel, Word, PPT)</div>
+                <div class="skill-tag"><i class="fab fa-google" style="color: #0F9D58;"></i> Google Workspace (Sheets, Docs)</div>
+                <div class="skill-tag"><i class="fas fa-cloud" style="color: #f80000;"></i> Oracle HCM Cloud</div>
+                <div class="skill-tag"><i class="fas fa-database" style="color: #f2a60c;"></i> Data Entry & Management</div>
+                <div class="skill-tag"><i class="fas fa-chart-bar" style="color: #4a90e2;"></i> Pelaporan Administratif</div>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: 20px; color: var(--text-muted);">Soft Skills</h3>
+            <div class="skills-container">
+                <div class="skill-tag"><i class="fas fa-comments"></i> Komunikasi Efektif</div>
+                <div class="skill-tag"><i class="fas fa-clock"></i> Manajemen Waktu</div>
+                <div class="skill-tag"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+                <div class="skill-tag"><i class="fas fa-users"></i> Kerja Sama Tim</div>
+                <div class="skill-tag"><i class="fas fa-sync-alt"></i> Adaptabilitas Tinggi</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYEK FIKTIF -->
+    <section id="proyek">
+        <div class="container">
+            <h2 class="section-title">Pengalaman Proyek (Administrasi Perbankan)</h2>
+            <div class="grid">
+                
+                <!-- Proyek 1 -->
+                <div class="card">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h3>Sistem Arsip Dokumen Kredit Digital</h3>
+                    <p>Mengerjakan proses digitalisasi 100+ dokumen fisik nasabah kredit ke dalam sistem database terenkripsi. Proyek ini berhasil mempercepat waktu pencarian data operasional hingga 40% dan mengurangi risiko kehilangan dokumen.</p>
+                </div>
+
+                <!-- Proyek 2 -->
+                <div class="card">
+                    <i class="fas fa-user-clock"></i>
+                    <h3>Otomatisasi Laporan Kehadiran Cabang</h3>
+                    <p>Mengembangkan dasbor berbasis Google Sheets terintegrasi untuk melacak kehadiran, jadwal cuti, dan shift teller antar cabang. Inovasi ini memangkas waktu rekapitulasi bulanan tim HR hingga 15 jam per bulan.</p>
+                </div>
+
+                <!-- Proyek 3 -->
+                <div class="card">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h3>Audit Data Rekening Pasif (Dormant)</h3>
+                    <p>Melakukan rekonsiliasi dan pembaruan data administratif pada 5.000+ rekening pasif. Memastikan seluruh data nasabah terarsip sesuai dengan Standar Operasional Prosedur (SOP) internal perbankan.</p>
+                </div>
+
+                <!-- Proyek 4 -->
+                <div class="card">
+                    <i class="fas fa-sitemap"></i>
+                    <h3>Optimasi Alur Cuti via Oracle HCM</h3>
+                    <p>Berperan sebagai asisten implementasi dalam memigrasikan sistem pengajuan cuti manual ke modul digital Oracle HCM Cloud. Memberikan panduan penggunaan aplikasi kepada 50+ staf cabang selama masa transisi.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+                &copy; 2026 Portofolio Profesional. Dibuat dengan presisi dan efisiensi.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
