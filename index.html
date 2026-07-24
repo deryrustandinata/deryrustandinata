@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Dery Rustan Dinata Safiuddin</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Canvas untuk Animasi Luar Angkasa -->
+    <canvas id="space-canvas"></canvas>
+
+    <header>
+        <nav>
+            <div class="logo">Dery<span>.Space</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#experience">Pengalaman</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SEKSI HOME -->
+        <section id="home" class="hero reveal">
+            <div class="hero-content">
+                <h3 class="greeting">Halo, Saya</h3>
+                <h1 class="name">Dery Rustan Dinata Safiuddin</h1>
+                <h2 class="role">Ahli Administrasi & Pengolahan Data</h2>
+                <p class="intro-text">
+                    Lulusan S1 Manajemen Universitas Halu Oleo yang berfokus pada operasional administrasi dan pengolahan data. Saya memiliki minat besar dalam menciptakan efisiensi operasional yang terstruktur, aman, dan inovatif secara berkelanjutan.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary-btn">Lihat Proyek <i class="fas fa-rocket"></i></a>
+                    <a href="#contact" class="btn secondary-btn">Hubungi Saya <i class="fas fa-paper-plane"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="astronaut-float">
+                    <i class="fas fa-user-astronaut fa-10x"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEKSI TENTANG -->
+        <section id="about" class="about reveal">
+            <h2 class="section-title">Tentang <span>Saya</span></h2>
+            <div class="about-container glass-panel">
+                <p>
+                    Saya adalah lulusan Sarjana Manajemen dari Universitas Halu Oleo dengan IPK 3.48/4.00. Saya memiliki pengalaman magang di bidang perbankan pada posisi Credit Operation di PT. Bank Negara Indonesia Tbk. (Persero). 
+                </p>
+                <p>
+                    Saya terbiasa mengelola data berskala besar, menyusun laporan operasional harian, serta menjaga keamanan dokumen fisik dan digital sesuai SOP perbankan. Skripsi saya berfokus pada pemanfaatan Artificial Intelligence (ChatGPT) dalam pengembangan potensi SDM, yang membuktikan ketertarikan saya pada integrasi teknologi untuk efisiensi kerja.
+                </p>
+            </div>
+        </section>
+
+        <!-- SEKSI KEAHLIAN -->
+        <section id="skills" class="skills reveal">
+            <h2 class="section-title">Keahlian <span>& Tools</span></h2>
+            <div class="skills-grid">
+                <!-- Hard Skills -->
+                <div class="skill-card glass-panel interactive-card">
+                    <i class="fas fa-file-excel skill-icon"></i>
+                    <h3>Microsoft Excel</h3>
+                    <p>Pivot table, HLOOKUP, VLOOKUP, XLOOKUP, IF</p>
+                </div>
+                <div class="skill-card glass-panel interactive-card">
+                    <i class="fas fa-file-word skill-icon"></i>
+                    <h3>Microsoft Word</h3>
+                    <p>Penyusunan dokumen & korespondensi formal</p>
+                </div>
+                <div class="skill-card glass-panel interactive-card">
+                    <i class="fas fa-table skill-icon"></i>
+                    <h3>Google Sheets</h3>
+                    <p>Kolaborasi data real-time & otomatisasi dasar</p>
+                </div>
+                <div class="skill-card glass-panel interactive-card">
+                    <i class="fas fa-cloud skill-icon"></i>
+                    <h3>Oracle HCM Cloud</h3>
+                    <p>Manajemen data HRIS terintegrasi</p>
+                </div>
+                <div class="skill-card glass-panel interactive-card">
+                    <i class="fas fa-chart-line skill-icon"></i>
+                    <h3>SPSS & Analisis Data</h3>
+                    <p>Pengolahan data statistik untuk riset (IPK 3.48)</p>
+                </div>
+                <div class="skill-card glass-panel interactive-card">
+                    <i class="fas fa-server skill-icon"></i>
+                    <h3>Core Banking System</h3>
+                    <p>Operasional & maintenance data nasabah</p>
+                </div>
+            </div>
+
+            <h3 class="sub-title">Soft Skills</h3>
+            <div class="soft-skills-container">
+                <span class="badge"><i class="fas fa-comments"></i> Komunikasi Efektif</span>
+                <span class="badge"><i class="fas fa-clock"></i> Manajemen Waktu</span>
+                <span class="badge"><i class="fas fa-lightbulb"></i> Pemecahan Masalah</span>
+                <span class="badge"><i class="fas fa-users"></i> Kerja Sama Tim</span>
+                <span class="badge"><i class="fas fa-sync-alt"></i> Adaptabilitas Tinggi</span>
+            </div>
+        </section>
+
+        <!-- SEKSI PENGALAMAN -->
+        <section id="experience" class="experience reveal">
+            <h2 class="section-title">Pengalaman <span>Profesional</span></h2>
+            <div class="timeline">
+                <div class="timeline-item glass-panel">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Okt 2025 - Apr 2026</div>
+                    <h3>Credit Operation - Magang</h3>
+                    <h4>PT. Bank Negara Indonesia Tbk. (Persero)</h4>
+                    <ul>
+                        <li>Memahami end-to-end process kredit perbankan dari pengajuan hingga monitoring.</li>
+                        <li>Mengoperasikan sistem core bank untuk mengelola data nasabah secara real time.</li>
+                        <li>Menjaga keamanan dokumen nasabah (fisik/digital) sesuai SOP.</li>
+                        <li>Menyiapkan dokumen administrasi kredit untuk audit internal.</li>
+                        <li>Menyusun laporan administrasi harian menggunakan Microsoft Excel.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEKSI PROYEK -->
+        <section id="projects" class="projects reveal">
+            <h2 class="section-title">Proyek <span>Administrasi</span></h2>
+            <div class="projects-grid">
+                <div class="project-card glass-panel interactive-card" onclick="openModal('modal1')">
+                    <div class="project-img"><i class="fas fa-database fa-4x"></i></div>
+                    <h3>Sistem Input Data Otomatis</h3>
+                    <p>Otomatisasi entri data administrasi harian</p>
+                    <span class="read-more">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                </div>
+                <div class="project-card glass-panel interactive-card" onclick="openModal('modal2')">
+                    <div class="project-img"><i class="fas fa-folder-open fa-4x"></i></div>
+                    <h3>Manajemen Arsip Digital Terpadu</h3>
+                    <p>Migrasi dokumen fisik ke cloud database</p>
+                    <span class="read-more">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                </div>
+                <div class="project-card glass-panel interactive-card" onclick="openModal('modal3')">
+                    <div class="project-img"><i class="fas fa-users-cog fa-4x"></i></div>
+                    <h3>Migrasi Data HRIS</h3>
+                    <p>Implementasi pembaruan data pada Oracle HCM Cloud</p>
+                    <span class="read-more">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                </div>
+                <div class="project-card glass-panel interactive-card" onclick="openModal('modal4')">
+                    <div class="project-img"><i class="fas fa-chart-pie fa-4x"></i></div>
+                    <h3>Dashboard Laporan Operasional</h3>
+                    <p>Visualisasi KPI tim menggunakan Google Sheets</p>
+                    <span class="read-more">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEKSI KONTAK -->
+        <section id="contact" class="contact reveal">
+            <h2 class="section-title">Hubungi <span>Saya</span></h2>
+            <div class="contact-container glass-panel">
+                <div class="contact-info">
+                    <h3>Mari Berkolaborasi!</h3>
+                    <p>Saya terbuka untuk peluang karir dan diskusi profesional. Silakan hubungi saya melalui form ini atau kontak di bawah.</p>
+                    <div class="info-item"><i class="fas fa-map-marker-alt"></i> Jl. Pattimura, Watulondo, Kendari</div>
+                    <div class="info-item"><i class="fas fa-phone-alt"></i> +62 821-8868-1185</div>
+                    <div class="info-item"><i class="fas fa-envelope"></i> derytheprodigy@gmail.com</div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="input-group">
+                        <input type="text" id="name" required placeholder="Nama Lengkap">
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required placeholder="Email Anda">
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" rows="5" required placeholder="Pesan Anda..."></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn submit-btn">Kirim Pesan <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dery Rustan Dinata Safiuddin. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modals untuk Pop-up Interaktif -->
+    <div id="modal1" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Sistem Input Data Otomatis</h2>
+            <p><strong>Fokus:</strong> Efisiensi Administrasi</p>
+            <p>Meningkatkan efisiensi input dokumen harian dengan memanfaatkan kombinasi rumus tingkat lanjut (XLOOKUP & IF) serta Macro pada Microsoft Excel. Proyek ini memangkas waktu pemrosesan data sebesar 40% dan mengurangi human error hingga 95%.</p>
+            <div class="modal-actions">
+                <button class="action-btn"><i class="fas fa-heart"></i> Suka</button>
+                <button class="action-btn"><i class="fas fa-comment"></i> Komentar</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Manajemen Arsip Digital Terpadu</h2>
+            <p><strong>Fokus:</strong> Pengelolaan Berkas</p>
+            <p>Mensimulasikan proses digitalisasi lebih dari 500+ dokumen klien fisik ke dalam sistem penyimpanan cloud tersentralisasi. Mengimplementasikan struktur folder hierarkis yang memudahkan pencarian dokumen real-time dalam hitungan detik.</p>
+            <div class="modal-actions"><button class="action-btn"><i class="fas fa-heart"></i> Suka</button></div>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Migrasi Data HRIS</h2>
+            <p><strong>Fokus:</strong> Pengolahan Data Karyawan</p>
+            <p>Proyek simulasi administrasi yang berfokus pada pembersihan data (data cleansing) dan migrasi record keahlian karyawan ke dalam sistem Oracle HCM Cloud, memastikan akurasi profil pekerja mencapai 100% tanpa redundansi.</p>
+            <div class="modal-actions"><button class="action-btn"><i class="fas fa-heart"></i> Suka</button></div>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Dashboard Laporan Operasional</h2>
+            <p><strong>Fokus:</strong> Visualisasi Data & Pelaporan</p>
+            <p>Merancang dashboard pelaporan dinamis menggunakan Google Sheets yang terintegrasi. Dashboard ini menampilkan metrik kinerja tim (KPI), status dokumen pending, dan analisis efektivitas operasional harian secara visual dan real-time.</p>
+            <div class="modal-actions"><button class="action-btn"><i class="fas fa-heart"></i> Suka</button></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
